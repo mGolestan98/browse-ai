@@ -1,0 +1,30 @@
+{
+  "name": "browse-ai",
+  "version": "0.0.0",
+  "description": "A javascript module to work with browse-ai api",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf build && yarn tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mGolestan98/browse-ai.git"
+  },
+  "keywords": [
+    "browse-ai",
+    "browseai"
+  ],
+  "author": "Mohsen Golestan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mGolestan98/browse-ai/issues"
+  },
+  "homepage": "https://github.com/mGolestan98/browse-ai#readme",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
