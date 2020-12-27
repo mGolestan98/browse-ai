@@ -1,7 +1,7 @@
 {
   "name": "browse-ai",
   "version": "0.0.0",
-  "description": "A javascript module to work with browse-ai api",
+  "description": "A javascript sdk to work with browse-ai api",
   "main": "index.js",
   "scripts": {
     "build": "rimraf build && yarn tsc"
