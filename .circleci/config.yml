@@ -12,6 +12,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/repo
+      - run: node -v
       - run:
           name: Install node@v14.16.0
           command: |
