@@ -13,12 +13,12 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - run:
-          name: Install node@v8.11.3
+          name: Install node@v14.16.0
           command: |
             export NVM_DIR="/opt/circleci/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            nvm install v8.11.3
-            nvm alias default v8.11.3
+            nvm install v14.16.0
+            nvm alias default v14.16.0
       - run: |
           export NVM_DIR="/opt/circleci/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
