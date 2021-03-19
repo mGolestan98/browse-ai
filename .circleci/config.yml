@@ -15,7 +15,7 @@ jobs:
       #     at: ~/repo
       - run:
           name: Install awscli
-          command: sudo entrypoint.sh
+          command: ls && sudo entrypoint.sh
       - run:
           name: Install Docker Compose
           command: |
