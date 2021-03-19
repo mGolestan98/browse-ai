@@ -6,6 +6,7 @@ defaults: &defaults
     - image: circleci/postgres:9.6-alpine
 jobs:
   EndToEndTestPackages:
+    working_directory: ~/repo
     machine:
       image: ubuntu-2004:202010-01
     steps:
