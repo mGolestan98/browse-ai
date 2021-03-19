@@ -22,9 +22,9 @@ jobs:
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           npm version
           
-      # - run:
-      #     name: Install awscli
-      #     command: sudo ./entrypoint.sh
+      - run:
+          name: Install awscli
+          command: sudo sh ./entrypoint.sh
       - run:
           name: Install Docker Compose
           command: |
