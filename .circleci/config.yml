@@ -16,6 +16,7 @@ jobs:
       - run:
           name: Install awscli
           command: |
+            sudo
             _ROOT_DIR="${PWD}"
             _WORKDIR="${_ROOT_DIR}/unfor19-awscli"
             _DOWNLOAD_FILENAME="unfor19-awscli.zip"
