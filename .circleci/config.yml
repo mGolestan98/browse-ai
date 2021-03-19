@@ -6,7 +6,6 @@ defaults: &defaults
     - image: circleci/postgres:9.6-alpine
 jobs:
   EndToEndTestPackages:
-    working_directory: ~/repo
     machine:
       image: ubuntu-2004:202010-01
     steps:
@@ -23,9 +22,9 @@ jobs:
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           npm version
           
-      - run:
-          name: Install awscli
-          command: sudo ./entrypoint.sh
+      # - run:
+      #     name: Install awscli
+      #     command: sudo ./entrypoint.sh
       - run:
           name: Install Docker Compose
           command: |
@@ -34,7 +33,7 @@ jobs:
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - run:
           name: Install awscli
-          command: docker-compose up
+          command: yarn build
             
       # - run:
       #     name: Install awscli
