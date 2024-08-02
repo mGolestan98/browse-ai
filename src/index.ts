@@ -38,6 +38,11 @@ type TriggerTaskArgsType = {
   waitForJob?: boolean;
 };
 
+type TriggerBulkRunArgsType = {
+  taskId: string;
+  variables?: { [key: string]: string };
+};
+
 class BrowseAi {
   private RequestHandler: RequestHandler;
   constructor(apiKey: string) {
@@ -55,6 +60,15 @@ class BrowseAi {
       `/tasks/${args.taskId}/jobs${args.waitForJob ? "?waitForJob=true" : ""}`,
       { variables: args.variables }
     );
+  }
+
+  // triggers multiple jobs in one request
+  triggerBulkRun(args: TriggerTaskArgsType): Promise<JobDataType> {
+    if (!args.taskId) return Promise.reject("taskId is required.");
+
+    return this.RequestHandler.post(`/tasks/${args.taskId}/jobs`, {
+      variables: args.variables
+    });
   }
 }
 
