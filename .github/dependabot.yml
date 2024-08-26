@@ -5,9 +5,7 @@ updates:
     schedule:
       interval: daily
     allow:
-      - dependency-name: "*"
-        update-types:
-          ["version-update:semver-minor", "version-update:semver-patch"]
+      - dependency-type: "direct:production"
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
