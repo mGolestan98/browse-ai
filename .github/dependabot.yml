@@ -5,5 +5,8 @@ updates:
     schedule:
       interval: monthly
     ignore:
+      # Ignore updates for major versions
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
+      # Typescript does not follow semver
+      - dependency-name: "typescript"
